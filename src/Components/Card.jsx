@@ -2,7 +2,11 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div>Hola, soy una tarjeta</div>
+    <div>
+      <h2>
+      Hola Dev, para registrarte ingresa tu datos:
+      </h2>
+      </div>
   )
 }
 

@@ -12,8 +12,8 @@ function App() {
   return (
     <>
     <div>
-      <Formulario />
       <Card />
+      <Formulario />
     </div>
      
     </>
