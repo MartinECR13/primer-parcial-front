@@ -7,15 +7,15 @@ import Formulario from './Components/Formulario'
 import Card from './Components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-    <div>
-      <Card />
-      <Formulario />
-    </div>
-     
+      <div>
+        
+        <Formulario />
+        
+      </div>
     </>
   )
 }

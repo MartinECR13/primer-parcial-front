@@ -17,10 +17,11 @@ const Formulario = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     let  regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    let regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    let regexPass = /^(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
     if (
-      dev.name.trim().length > 6 &&
+      dev.name.trim().length > 10 &&
       dev.lastname.includes(" ") &&
+      dev.age >= 18 &&
       regexEmail.test(dev.email) &&
       regexPass.test(dev.password)
     ) {
@@ -34,8 +35,12 @@ const Formulario = () => {
 
     <div className='Form'>
       {success ? (
-        <Card/>
+        <Card dev={dev} />
+
       ):(
+        <div>
+          <h3 >Hola Dev, por favor ingresa tus datos para acceder:</h3>
+
 <form onSubmit = {handleSubmit}>
             <label>
             Nombre:
@@ -81,6 +86,7 @@ const Formulario = () => {
           )}
 
         </form>
+        </div>
 
       )
        }

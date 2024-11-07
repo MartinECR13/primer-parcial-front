@@ -1,13 +1,20 @@
 import React from 'react'
+import '../Styles/Card.css'
 
-const Card = () => {
+
+const Card = ({ dev }) => {
+ 
   return (
-    <div>
-      <h2>
-      Hola Dev, para registrarte ingresa tu datos:
-      </h2>
-      </div>
-  )
-}
+    <div className='card'>
+      <h2>¡Bienvenido {dev.name}!</h2>
+      <hr />
+      <p>Estos son tus datos:</p>
+      <p>Nombre: {dev.name}</p>
+      <p>Apellido: {dev.lastname}</p>
+      <p>Edad: {dev.age}</p>
+      <p>Email: {dev.email}</p>
+    </div>
+  );
+};
 
-export default Card
+export default Card;
